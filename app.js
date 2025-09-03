@@ -35,21 +35,34 @@ function agregarAmigo(){
     return
       
 }  
-  
 
-function sortearAmigo(){
-    let random = Math.floor(Math.random() * listaAmigos.length);
-    //alert(`Tu amigo secreto es: ${listaAmigos[random]}`);
-    let amigoSecreto = listaAmigos[random];
-    ulresultado.innerHTML = `<li>Tu amigo secreto es: ${amigoSecreto}</li>`;
-    listaAmigos.splice(random, 1);
-    asignarTextoElemento('h2', 'Gracias por participar, compra un lindo regalo!!!');
-    setTimeout(condicionesIniciales, 2500);
-    return
-    
+
+
+function sortearAmigo() {
+  if (listaAmigos.length === 0) {
+    asignarTextoElemento('h2', 'ya fueron todos sorteados, no hay mas amigos.');
+    ulresultado.innerHTML = ''; 
+    return;
+
+  }
+
+  let random = Math.floor(Math.random() * listaAmigos.length);
+  let amigoSecreto = listaAmigos[random];
+  ulresultado.innerHTML = `<li>Tu amigo secreto es: ${amigoSecreto}</li>`;
+  listaAmigos.splice(random, 1);
+  limpiarCaja();
+  asignarTextoElemento('h2', 'Gracias por participar, compra un lindo regalo!!!');
+  setTimeout(condicionesIniciales, 2500);
+  return;
+}
+
+function reiniciarJuego(){
+    limpiarCaja();
+    condicionesIniciales();
 }
 
 condicionesIniciales();
+
 
 
 
