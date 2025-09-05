@@ -1,4 +1,12 @@
-primer codigo de javasscript
+
+callenger amigo secreto
+
+
+
+
+
+
+
 
 se modifico el en app.js el alert, se cambio alert por mensajes en <h2> con temporizador
 
