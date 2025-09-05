@@ -52,7 +52,7 @@ function sortearAmigo() {
     asignarTextoElemento('h2', 'ya fueron todos sorteados, no hay mas amigos.');
     ulresultado.innerHTML = '';
     limpiarLista();
-    setTimeout(mensajeInicial, 2000);
+    setTimeout(mensajeInicial, 2500);
     return;
   }
 
